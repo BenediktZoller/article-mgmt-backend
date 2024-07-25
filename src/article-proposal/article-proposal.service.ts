@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { MqttService } from '../mqtt/mqtt.service';
+import {PlcService} from "../plc/plc.service";
 
 @Injectable()
 export class ArticleProposalService {
-    constructor(private readonly mqttService: MqttService) {
+    constructor(private readonly mqttService: MqttService, private readonly plcService: PlcService) {
         this.subscribeToTopics();
     }
 
@@ -15,5 +16,7 @@ export class ArticleProposalService {
     private handleArticleProposal(topic: string, message: Buffer) {
         const data = message.toString();
         console.log(`Article Proposal received on ${topic}: ${data}`);
+        // const plcValue = this.plcService.readVariable(data);
+        // console.log(`PLC value for ${data}: ${plcValue}`);
     }
 }

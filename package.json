@@ -24,6 +24,7 @@
     "@nestjs/microservices": "^10.3.10",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/swagger": "^7.3.1",
+    "ads-client": "^1.14.3",
     "class-validator": "^0.14.1",
     "mqtt": "^5.8.1",
     "reflect-metadata": "^0.2.0",

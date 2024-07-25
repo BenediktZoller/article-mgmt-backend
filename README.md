@@ -27,6 +27,9 @@ $ docker-compose up
 ```bash
 $ docker exec -it mqtt5 mosquitto_pub -h localhost -t article/proposal -m "test message"
  ```
+```bash
+$ docker exec -it mqtt5 mosquitto_pub -h localhost -t plc/write/test1 -m "123"
+ ```
 
 ## MQTT Client
 
